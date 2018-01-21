@@ -4,7 +4,7 @@ in the context of PRINTING on the CONSOLE.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
          their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -61,6 +61,10 @@ def rectangle_of_stars(r, c):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(r):
+        for j in range(c):
+            print('*', end='')
+        print()
 
 
 def run_test_triangle_of_stars():
@@ -116,6 +120,10 @@ def triangle_of_stars(r):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(r):
+        for j in range(k+1):
+            print('*',end='')
+        print()
 
 
 def run_test_decreasing_exclamation_marks():
@@ -158,6 +166,11 @@ def decreasing_exclamation_marks(m, n):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(m,n-1,-1):
+        for j in range(k):
+            print('!', end='')
+        print()
+
 
 
 def run_test_alternating_brackets():
@@ -200,6 +213,15 @@ def alternating_brackets(m, n):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(m,n-1,-1):
+        for j in range(k):
+            if j%2==0:
+                print('[', end='')
+            else:
+                print(']', end='')
+        print()
+
+
 
 
 def run_test_triangle_same_number_in_each_row():
@@ -243,6 +265,10 @@ def triangle_same_number_in_each_row(r):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(r):
+        for j in range(k+1):
+            print(k+1, end='')
+        print()
 
 
 def run_test_triangle_all_numbers_in_each_row():
@@ -286,7 +312,10 @@ def triangle_all_numbers_in_each_row(r):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for k in range(r):
+        for j in range(k+1):
+            print(j+1, end='')
+        print()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
